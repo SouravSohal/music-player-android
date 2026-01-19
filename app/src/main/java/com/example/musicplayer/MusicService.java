@@ -18,6 +18,7 @@ public class MusicService extends Service {
     private List<Song> songs = new ArrayList<>();
     private int currentPosition = -1;
     private OnSongChangeListener songChangeListener;
+    private boolean isPrepared = false;
 
     public interface OnSongChangeListener {
         void onSongChanged(Song song);
@@ -60,8 +61,10 @@ public class MusicService extends Service {
 
         try {
             mediaPlayer.reset();
+            isPrepared = false;
             mediaPlayer.setDataSource(song.getPath());
             mediaPlayer.prepare();
+            isPrepared = true;
             mediaPlayer.start();
 
             if (songChangeListener != null) {
@@ -70,6 +73,7 @@ public class MusicService extends Service {
             }
         } catch (IOException e) {
             Log.e(TAG, "Error playing song: " + e.getMessage());
+            isPrepared = false;
         }
     }
 
@@ -83,10 +87,14 @@ public class MusicService extends Service {
     }
 
     public void resume() {
-        if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
-            mediaPlayer.start();
-            if (songChangeListener != null) {
-                songChangeListener.onPlaybackStateChanged(true);
+        if (mediaPlayer != null && isPrepared && !mediaPlayer.isPlaying()) {
+            try {
+                mediaPlayer.start();
+                if (songChangeListener != null) {
+                    songChangeListener.onPlaybackStateChanged(true);
+                }
+            } catch (IllegalStateException e) {
+                Log.e(TAG, "Error resuming playback: " + e.getMessage());
             }
         }
     }
@@ -111,15 +119,30 @@ public class MusicService extends Service {
     }
 
     public boolean isPlaying() {
-        return mediaPlayer != null && mediaPlayer.isPlaying();
+        try {
+            return mediaPlayer != null && isPrepared && mediaPlayer.isPlaying();
+        } catch (IllegalStateException e) {
+            Log.e(TAG, "Error checking playing state: " + e.getMessage());
+            return false;
+        }
     }
 
     public int getCurrentPosition() {
-        return mediaPlayer != null ? mediaPlayer.getCurrentPosition() : 0;
+        try {
+            return (mediaPlayer != null && isPrepared) ? mediaPlayer.getCurrentPosition() : 0;
+        } catch (IllegalStateException e) {
+            Log.e(TAG, "Error getting current position: " + e.getMessage());
+            return 0;
+        }
     }
 
     public int getDuration() {
-        return mediaPlayer != null ? mediaPlayer.getDuration() : 0;
+        try {
+            return (mediaPlayer != null && isPrepared) ? mediaPlayer.getDuration() : 0;
+        } catch (IllegalStateException e) {
+            Log.e(TAG, "Error getting duration: " + e.getMessage());
+            return 0;
+        }
     }
 
     public void seekTo(int position) {
