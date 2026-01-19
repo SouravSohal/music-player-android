@@ -163,32 +163,44 @@ public class MainActivity extends AppCompatActivity implements MusicService.OnSo
         songs.clear();
         ContentResolver contentResolver = getContentResolver();
         Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+        String[] projection = {
+            MediaStore.Audio.Media.TITLE,
+            MediaStore.Audio.Media.ARTIST,
+            MediaStore.Audio.Media.DATA,
+            MediaStore.Audio.Media.DURATION
+        };
         String selection = MediaStore.Audio.Media.IS_MUSIC + "!= 0";
         String sortOrder = MediaStore.Audio.Media.TITLE + " ASC";
 
-        Cursor cursor = contentResolver.query(uri, null, selection, null, sortOrder);
+        Cursor cursor = null;
+        try {
+            cursor = contentResolver.query(uri, projection, selection, null, sortOrder);
 
-        if (cursor != null && cursor.getCount() > 0) {
-            while (cursor.moveToNext()) {
-                int titleIndex = cursor.getColumnIndex(MediaStore.Audio.Media.TITLE);
-                int artistIndex = cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST);
-                int pathIndex = cursor.getColumnIndex(MediaStore.Audio.Media.DATA);
-                int durationIndex = cursor.getColumnIndex(MediaStore.Audio.Media.DURATION);
+            if (cursor != null && cursor.getCount() > 0) {
+                while (cursor.moveToNext()) {
+                    int titleIndex = cursor.getColumnIndex(MediaStore.Audio.Media.TITLE);
+                    int artistIndex = cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST);
+                    int pathIndex = cursor.getColumnIndex(MediaStore.Audio.Media.DATA);
+                    int durationIndex = cursor.getColumnIndex(MediaStore.Audio.Media.DURATION);
 
-                // Validate indices before using them
-                if (titleIndex == -1 || artistIndex == -1 || pathIndex == -1 || durationIndex == -1) {
-                    continue;
+                    // Validate indices before using them
+                    if (titleIndex == -1 || artistIndex == -1 || pathIndex == -1 || durationIndex == -1) {
+                        continue;
+                    }
+
+                    String title = cursor.getString(titleIndex);
+                    String artist = cursor.getString(artistIndex);
+                    String path = cursor.getString(pathIndex);
+                    long duration = cursor.getLong(durationIndex);
+
+                    Song song = new Song(title, artist, path, duration);
+                    songs.add(song);
                 }
-
-                String title = cursor.getString(titleIndex);
-                String artist = cursor.getString(artistIndex);
-                String path = cursor.getString(pathIndex);
-                long duration = cursor.getLong(durationIndex);
-
-                Song song = new Song(title, artist, path, duration);
-                songs.add(song);
             }
-            cursor.close();
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
         }
 
         songAdapter.notifyDataSetChanged();
