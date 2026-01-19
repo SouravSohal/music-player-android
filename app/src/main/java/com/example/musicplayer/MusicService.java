@@ -146,8 +146,12 @@ public class MusicService extends Service {
     }
 
     public void seekTo(int position) {
-        if (mediaPlayer != null) {
-            mediaPlayer.seekTo(position);
+        if (mediaPlayer != null && isPrepared) {
+            try {
+                mediaPlayer.seekTo(position);
+            } catch (IllegalStateException e) {
+                Log.e(TAG, "Error seeking to position: " + e.getMessage());
+            }
         }
     }
 
@@ -158,5 +162,6 @@ public class MusicService extends Service {
             mediaPlayer.release();
             mediaPlayer = null;
         }
+        isPrepared = false;
     }
 }
