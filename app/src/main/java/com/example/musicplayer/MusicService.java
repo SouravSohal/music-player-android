@@ -74,7 +74,7 @@ public class MusicService extends Service {
     }
 
     public void pause() {
-        if (mediaPlayer.isPlaying()) {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
             if (songChangeListener != null) {
                 songChangeListener.onPlaybackStateChanged(false);
@@ -83,7 +83,7 @@ public class MusicService extends Service {
     }
 
     public void resume() {
-        if (!mediaPlayer.isPlaying()) {
+        if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
             mediaPlayer.start();
             if (songChangeListener != null) {
                 songChangeListener.onPlaybackStateChanged(true);

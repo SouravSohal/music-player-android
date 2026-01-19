@@ -175,6 +175,11 @@ public class MainActivity extends AppCompatActivity implements MusicService.OnSo
                 int pathIndex = cursor.getColumnIndex(MediaStore.Audio.Media.DATA);
                 int durationIndex = cursor.getColumnIndex(MediaStore.Audio.Media.DURATION);
 
+                // Validate indices before using them
+                if (titleIndex == -1 || artistIndex == -1 || pathIndex == -1 || durationIndex == -1) {
+                    continue;
+                }
+
                 String title = cursor.getString(titleIndex);
                 String artist = cursor.getString(artistIndex);
                 String path = cursor.getString(pathIndex);
