@@ -42,6 +42,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name=".ui.EqualizerActivity"
+            android:exported="false"
+            android:label="@string/menu_equalizer"
+            android:parentActivityName=".ui.MainActivity" />
+        
+        <activity
+            android:name=".ui.FullScreenPlayerActivity"
+            android:exported="false"
+            android:label="Now Playing"
+            android:theme="@style/Theme.MusicPlayer"
+            android:parentActivityName=".ui.MainActivity" />
+        
+        <activity
+            android:name=".ui.SearchActivity"
+            android:exported="false"
+            android:label="Search"
+            android:theme="@style/Theme.MusicPlayer"
+            android:windowSoftInputMode="stateVisible" />
+        
+        <activity
+            android:name=".ui.PlaylistDetailActivity"
+            android:exported="false"
+            android:label="Playlist"
+            android:theme="@style/Theme.MusicPlayer"
+            android:parentActivityName=".ui.MainActivity" />
 
         <!-- Music Playback Service -->
         <service

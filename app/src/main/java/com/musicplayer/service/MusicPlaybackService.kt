@@ -96,6 +96,7 @@ class MusicPlaybackService : MediaSessionService() {
                 .add(SessionCommand(COMMAND_TOGGLE_SHUFFLE, Bundle.EMPTY))
                 .add(SessionCommand(COMMAND_SET_REPEAT_MODE, Bundle.EMPTY))
                 .add(SessionCommand(COMMAND_APPLY_AUDIO_EFFECTS, Bundle.EMPTY))
+                .add(SessionCommand(COMMAND_GET_AUDIO_SESSION, Bundle.EMPTY))
                 .build()
 
             return MediaSession.ConnectionResult.AcceptedResultBuilder(session)
@@ -120,6 +121,12 @@ class MusicPlaybackService : MediaSessionService() {
                 COMMAND_APPLY_AUDIO_EFFECTS -> {
                     applyAudioEffects(args)
                 }
+                COMMAND_GET_AUDIO_SESSION -> {
+                    val resultBundle = Bundle().apply {
+                        putInt("audioSessionId", player.audioSessionId)
+                    }
+                    return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS, resultBundle))
+                }
             }
             return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS))
         }
@@ -137,10 +144,18 @@ class MusicPlaybackService : MediaSessionService() {
         audioEffectsManager.setTrebleEnhancement(trebleEnhancement)
         audioEffectsManager.setEqualizerEnabled(equalizerEnabled)
     }
+    
+    /**
+     * Get the audio session ID for effects
+     */
+    fun getAudioSessionId(): Int {
+        return player.audioSessionId
+    }
 
     companion object {
         private const val COMMAND_TOGGLE_SHUFFLE = "TOGGLE_SHUFFLE"
         private const val COMMAND_SET_REPEAT_MODE = "SET_REPEAT_MODE"
         private const val COMMAND_APPLY_AUDIO_EFFECTS = "APPLY_AUDIO_EFFECTS"
+        const val COMMAND_GET_AUDIO_SESSION = "GET_AUDIO_SESSION"
     }
 }

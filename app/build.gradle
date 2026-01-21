@@ -4,6 +4,10 @@ plugins {
     id 'kotlin-kapt'
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 android {
     namespace 'com.musicplayer'
     compileSdk 34
@@ -82,8 +86,9 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     kapt 'com.github.bumptech.glide:compiler:4.16.0'
     
-    // Audio Processing
-    implementation 'com.arthenica:mobile-ffmpeg-full:4.4.LTS'
+    // Audio Processing - Removed FFmpeg (library retired)
+    // Note: ExoPlayer (media3) above handles most audio formats natively
+    // For advanced conversion, consider: WritingMinds/FFmpegAndroid or use server-side processing
     
     // Permissions
     implementation 'com.guolindev.permissionx:permissionx:1.7.1'

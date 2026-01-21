@@ -1,0 +1,308 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.musicplayer"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Media & Storage Permissions -->
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:5:5-80
+12-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:5:22-77
+13    <uses-permission
+13-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:6:5-7:38
+14        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+14-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:6:22-78
+15        android:maxSdkVersion="32" />
+15-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:7:9-35
+16    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+16-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:8:5-75
+16-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:8:22-72
+17    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+17-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:9:5-75
+17-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:9:22-72
+18
+19    <!-- Network Permissions -->
+20    <uses-permission android:name="android.permission.INTERNET" />
+20-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:12:5-67
+20-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:12:22-64
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+21-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:13:5-79
+21-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:13:22-76
+22
+23    <!-- Bluetooth Permissions -->
+24    <uses-permission android:name="android.permission.BLUETOOTH" />
+24-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:16:5-68
+24-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:16:22-65
+25    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+25-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:17:5-74
+25-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:17:22-71
+26    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+26-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:18:5-76
+26-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:18:22-73
+27
+28    <!-- Foreground Service Permission -->
+29    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+29-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:21:5-77
+29-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:21:22-74
+30    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+30-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:22:5-92
+30-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:22:22-89
+31    <uses-permission android:name="android.permission.WAKE_LOCK" />
+31-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:23:5-68
+31-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:23:22-65
+32
+33    <!-- Post Notifications for Android 13+ -->
+34    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+34-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:26:5-77
+34-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:26:22-74
+35
+36    <permission
+36-->[androidx.core:core:1.12.0] /home/kenx1kaneki/.gradle/caches/transforms-4/cf9f24cc0f760cbad497a612d511688c/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+37        android:name="com.musicplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+37-->[androidx.core:core:1.12.0] /home/kenx1kaneki/.gradle/caches/transforms-4/cf9f24cc0f760cbad497a612d511688c/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+38        android:protectionLevel="signature" />
+38-->[androidx.core:core:1.12.0] /home/kenx1kaneki/.gradle/caches/transforms-4/cf9f24cc0f760cbad497a612d511688c/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+39
+40    <uses-permission android:name="com.musicplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+40-->[androidx.core:core:1.12.0] /home/kenx1kaneki/.gradle/caches/transforms-4/cf9f24cc0f760cbad497a612d511688c/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+40-->[androidx.core:core:1.12.0] /home/kenx1kaneki/.gradle/caches/transforms-4/cf9f24cc0f760cbad497a612d511688c/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+41
+42    <application
+42-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:28:5-106:19
+43        android:name="com.musicplayer.MusicPlayerApplication"
+43-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:29:9-47
+44        android:allowBackup="true"
+44-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:30:9-35
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.12.0] /home/kenx1kaneki/.gradle/caches/transforms-4/cf9f24cc0f760cbad497a612d511688c/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+46        android:debuggable="true"
+47        android:extractNativeLibs="false"
+48        android:icon="@mipmap/ic_launcher"
+48-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:31:9-43
+49        android:label="@string/app_name"
+49-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:32:9-41
+50        android:supportsRtl="true"
+50-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:34:9-35
+51        android:testOnly="true"
+52        android:theme="@style/Theme.MusicPlayer" >
+52-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:33:9-49
+53        <activity
+53-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:36:9-44:20
+54            android:name="com.musicplayer.ui.MainActivity"
+54-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:37:13-44
+55            android:exported="true"
+55-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:38:13-36
+56            android:launchMode="singleTop" >
+56-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:39:13-43
+57            <intent-filter>
+57-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:40:13-43:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:41:17-69
+58-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:41:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:42:17-77
+60-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:42:27-74
+61            </intent-filter>
+62        </activity>
+63        <activity
+63-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:46:9-50:61
+64            android:name="com.musicplayer.ui.EqualizerActivity"
+64-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:47:13-49
+65            android:exported="false"
+65-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:48:13-37
+66            android:label="@string/menu_equalizer"
+66-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:49:13-51
+67            android:parentActivityName="com.musicplayer.ui.MainActivity" />
+67-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:50:13-58
+68        <activity
+68-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:52:9-57:61
+69            android:name="com.musicplayer.ui.FullScreenPlayerActivity"
+69-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:53:13-56
+70            android:exported="false"
+70-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:54:13-37
+71            android:label="Now Playing"
+71-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:55:13-40
+72            android:parentActivityName="com.musicplayer.ui.MainActivity"
+72-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:57:13-58
+73            android:theme="@style/Theme.MusicPlayer" />
+73-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:56:13-53
+74        <activity
+74-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:59:9-64:58
+75            android:name="com.musicplayer.ui.SearchActivity"
+75-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:60:13-46
+76            android:exported="false"
+76-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:61:13-37
+77            android:label="Search"
+77-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:62:13-35
+78            android:theme="@style/Theme.MusicPlayer"
+78-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:63:13-53
+79            android:windowSoftInputMode="stateVisible" />
+79-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:64:13-55
+80        <activity
+80-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:66:9-71:61
+81            android:name="com.musicplayer.ui.PlaylistDetailActivity"
+81-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:67:13-54
+82            android:exported="false"
+82-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:68:13-37
+83            android:label="Playlist"
+83-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:69:13-37
+84            android:parentActivityName="com.musicplayer.ui.MainActivity"
+84-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:71:13-58
+85            android:theme="@style/Theme.MusicPlayer" />
+85-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:70:13-53
+86
+87        <!-- Music Playback Service -->
+88        <service
+88-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:74:9-82:19
+89            android:name="com.musicplayer.service.MusicPlaybackService"
+89-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:75:13-57
+90            android:enabled="true"
+90-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:76:13-35
+91            android:exported="false"
+91-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:77:13-37
+92            android:foregroundServiceType="mediaPlayback" >
+92-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:78:13-58
+93            <intent-filter>
+93-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:79:13-81:29
+94                <action android:name="androidx.media3.session.MediaSessionService" />
+94-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:80:17-86
+94-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:80:25-83
+95            </intent-filter>
+96        </service>
+97
+98        <!-- Bluetooth Receiver -->
+99        <receiver
+99-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:85:9-95:20
+100            android:name="com.musicplayer.bluetooth.BluetoothReceiver"
+100-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:86:13-56
+101            android:enabled="true"
+101-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:87:13-35
+102            android:exported="true" >
+102-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:88:13-36
+103            <intent-filter>
+103-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:89:13-94:29
+104                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+104-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:90:17-88
+104-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:90:25-85
+105                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+105-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:91:17-91
+105-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:91:25-88
+106                <action android:name="android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED" />
+106-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:92:17-105
+106-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:92:25-102
+107                <action android:name="android.intent.action.HEADSET_PLUG" />
+107-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:93:17-77
+107-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:93:25-74
+108            </intent-filter>
+109        </receiver>
+110
+111        <!-- Media Button Receiver -->
+112        <receiver
+112-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:98:9-104:20
+113            android:name="androidx.media.session.MediaButtonReceiver"
+113-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:99:13-70
+114            android:exported="true" >
+114-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:100:13-36
+115            <intent-filter>
+115-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:101:13-103:29
+116                <action android:name="android.intent.action.MEDIA_BUTTON" />
+116-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:102:17-77
+116-->/home/kenx1kaneki/Desktop/Music-Player/music-player-android/app/src/main/AndroidManifest.xml:102:25-74
+117            </intent-filter>
+118        </receiver>
+119
+120        <provider
+120-->[androidx.emoji2:emoji2:1.2.0] /home/kenx1kaneki/.gradle/caches/transforms-4/39584f18b74c6b29af888dadb67ddf55/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+121            android:name="androidx.startup.InitializationProvider"
+121-->[androidx.emoji2:emoji2:1.2.0] /home/kenx1kaneki/.gradle/caches/transforms-4/39584f18b74c6b29af888dadb67ddf55/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+122            android:authorities="com.musicplayer.androidx-startup"
+122-->[androidx.emoji2:emoji2:1.2.0] /home/kenx1kaneki/.gradle/caches/transforms-4/39584f18b74c6b29af888dadb67ddf55/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+123            android:exported="false" >
+123-->[androidx.emoji2:emoji2:1.2.0] /home/kenx1kaneki/.gradle/caches/transforms-4/39584f18b74c6b29af888dadb67ddf55/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+124            <meta-data
+124-->[androidx.emoji2:emoji2:1.2.0] /home/kenx1kaneki/.gradle/caches/transforms-4/39584f18b74c6b29af888dadb67ddf55/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+125                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+125-->[androidx.emoji2:emoji2:1.2.0] /home/kenx1kaneki/.gradle/caches/transforms-4/39584f18b74c6b29af888dadb67ddf55/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+126                android:value="androidx.startup" />
+126-->[androidx.emoji2:emoji2:1.2.0] /home/kenx1kaneki/.gradle/caches/transforms-4/39584f18b74c6b29af888dadb67ddf55/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+127            <meta-data
+127-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/kenx1kaneki/.gradle/caches/transforms-4/82a11c8fceddb6053d646e5eddbe3638/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+128                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+128-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/kenx1kaneki/.gradle/caches/transforms-4/82a11c8fceddb6053d646e5eddbe3638/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+129                android:value="androidx.startup" />
+129-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/kenx1kaneki/.gradle/caches/transforms-4/82a11c8fceddb6053d646e5eddbe3638/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+130            <meta-data
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+131                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+132                android:value="androidx.startup" />
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+133        </provider>
+134
+135        <uses-library
+135-->[androidx.window:window:1.0.0] /home/kenx1kaneki/.gradle/caches/transforms-4/c45b3802c0a194a7c59c022c6e8c7e26/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+136            android:name="androidx.window.extensions"
+136-->[androidx.window:window:1.0.0] /home/kenx1kaneki/.gradle/caches/transforms-4/c45b3802c0a194a7c59c022c6e8c7e26/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+137            android:required="false" />
+137-->[androidx.window:window:1.0.0] /home/kenx1kaneki/.gradle/caches/transforms-4/c45b3802c0a194a7c59c022c6e8c7e26/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+138        <uses-library
+138-->[androidx.window:window:1.0.0] /home/kenx1kaneki/.gradle/caches/transforms-4/c45b3802c0a194a7c59c022c6e8c7e26/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+139            android:name="androidx.window.sidecar"
+139-->[androidx.window:window:1.0.0] /home/kenx1kaneki/.gradle/caches/transforms-4/c45b3802c0a194a7c59c022c6e8c7e26/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+140            android:required="false" />
+140-->[androidx.window:window:1.0.0] /home/kenx1kaneki/.gradle/caches/transforms-4/c45b3802c0a194a7c59c022c6e8c7e26/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+141
+142        <service
+142-->[androidx.room:room-runtime:2.6.1] /home/kenx1kaneki/.gradle/caches/transforms-4/643024e2f1eaf58ec7e5991037cac3d1/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+143            android:name="androidx.room.MultiInstanceInvalidationService"
+143-->[androidx.room:room-runtime:2.6.1] /home/kenx1kaneki/.gradle/caches/transforms-4/643024e2f1eaf58ec7e5991037cac3d1/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+144            android:directBootAware="true"
+144-->[androidx.room:room-runtime:2.6.1] /home/kenx1kaneki/.gradle/caches/transforms-4/643024e2f1eaf58ec7e5991037cac3d1/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+145            android:exported="false" />
+145-->[androidx.room:room-runtime:2.6.1] /home/kenx1kaneki/.gradle/caches/transforms-4/643024e2f1eaf58ec7e5991037cac3d1/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+146
+147        <receiver
+147-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+148            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+148-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+149            android:directBootAware="false"
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+150            android:enabled="true"
+150-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+151            android:exported="true"
+151-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+152            android:permission="android.permission.DUMP" >
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+153            <intent-filter>
+153-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+154                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+154-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+154-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+155            </intent-filter>
+156            <intent-filter>
+156-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+157                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+157-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+157-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+158            </intent-filter>
+159            <intent-filter>
+159-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+160                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+160-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+160-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+161            </intent-filter>
+162            <intent-filter>
+162-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+163                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+163-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+163-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/kenx1kaneki/.gradle/caches/transforms-4/4cd7f83afe3b27ec8501e2b971dbf345/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+164            </intent-filter>
+165        </receiver>
+166    </application>
+167
+168</manifest>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- Album Art Thumbnail -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="12dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/ivTrackArt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_music_note"
+            tools:src="@tools:sample/avatars" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Track Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTrackTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Track Title"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            tools:text="Bohemian Rhapsody" />
+
+        <TextView
+            android:id="@+id/tvTrackArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Artist • Album"
+            android:textColor="#AAAAAA"
+            android:textSize="13sp"
+            tools:text="Queen • A Night at the Opera" />
+    </LinearLayout>
+
+    <!-- More Options Button -->
+    <ImageButton
+        android:id="@+id/btnMore"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="More options"
+        android:padding="12dp"
+        android:src="@android:drawable/ic_menu_more"
+        app:tint="#AAAAAA" />
+
+</LinearLayout>
